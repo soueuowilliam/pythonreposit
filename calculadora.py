@@ -18,12 +18,12 @@ while True:
     if menu == '1':
         print(f'O resultado é {num1 + num2}.')
         print()
-    if menu == '4':
-        print(f'O resultado é {num1 - num2}.')
-        print()
     if menu == '2':
         print(f'O resultado é {num1 * num2}.')
         print()
     if menu == '3':
         print(f'O resultado é {num1 / num2}.')
+        print()
+    if menu == '4':
+        print(f'O resultado é {num1 - num2}.')
         print()
