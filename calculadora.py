@@ -1,12 +1,15 @@
-while True:
-    print('Seja bem vindo a calculadora !!')
+def painel():
+    print('##  Seja bem vindo a calculadora !!  ##')
     print('[1] Adição::       \n[2] Multiplicação::'
         '\n[3] Divisão::      \n[4] Subtração::'
         '\n[5] Sair do programa::')
+    
 
+while True:
+    painel()
     menu = input('Selecione uma dessa opções, por favor: ')
     print()
-
+    
     if menu == '5':
         print('Obrigado por utilizar a calculadora.')
         break
