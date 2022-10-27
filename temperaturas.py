@@ -8,7 +8,7 @@ while True:
 
     elif select_temp == 'F'.lower():
         temp_c = int(input('Informe a temperatura em Cº: '))
-        temp_f = ( temp_c * 1.8) + 32
+        temp_f = ( temp_c * 1.8 ) + 32
         print(f'Sua temperatura em Fahrenheit é de {temp_f:.2f}º')
 
     elif select_temp == 'K'.lower():
