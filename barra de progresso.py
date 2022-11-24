@@ -2,34 +2,6 @@ from tkinter import *
 from tkinter.ttk import *
 import time
 
-""" 
-    step by step:
-    Definir uma função para começar o carregamento da barra de progresso.
-        Na função:
-            - A quantidade de tarefas.
-            - Um contador 
-            - Acrescentador para barra de progresso
-            - Velocidade do Download = velocidade / tarefas x 100
-            - Retardador para o progresso da barra
-            - Iterador de porcentagem
-            - Iterador de texto
-            - Atualizador de janela
-
-        Escopo global:
-            - Variável " Janela " para TK()
-            - Variável para porcentagem em str.
-            - Variável para texto em str.
-            - Variável para barra de progresso.
-                *Empacotar com largura da barra
-            - Variável para rótulo de porcentagem.
-                *Empacotar a variável.
-            - Variável para rótulo de texto.
-            - Variável para botão de Download.
-                *Empacotar o botão de Download.
-            - Chamada da " Janela "
-
-
-"""
 def start():
     tasks = 100 # exemplo de quantia de tarefas.
     counter = 0 # contador do looping while.
