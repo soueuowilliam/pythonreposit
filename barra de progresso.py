@@ -3,7 +3,7 @@ from tkinter.ttk import *
 import time
 
 def start():
-    tasks = 100 # exemplo de quantia de tarefas.
+    tasks = 100 # exemplo de quantia de tarefas no arquivo.
     counter = 0 # contador do looping while.
     speed = 1
     while counter < tasks:
