@@ -1,0 +1,49 @@
+
+saldo = 0
+limite = 500
+extrato = []
+numeros_saque = 0
+LIMITES_SAQUE = 3
+
+while True:
+    opçao = input('Saque / Depósito / Extrato: ')
+    if 'D' in opçao.title():
+        deposito = float(input('Valor do depósito: R$'))
+        if deposito < 1:
+            print('O depósito tem de ser maior que ZERO.')
+            
+        saldo = saldo + deposito
+        extrato.append(f'Débito de R${deposito:.2f}')
+        print(f'Você fez um depósito de R${deposito:.2f}')
+        print()
+        
+    elif 'S' in opçao.title():
+        saque = float(input(f'Valor do saque: R$'))
+        numeros_saque = numeros_saque + 1
+        
+        if saque > 500:
+            print(f'Falha na operação! Você não pode fazer saques acima de R${limite:.2f}')
+        if saldo == 0:
+            print('Falha na operação! Você não tem saldo para saque.')
+            print()
+            continue
+        if numeros_saque > LIMITES_SAQUE:
+            print('Você excedeu o limite de saques por dia.')
+            continue
+        
+        saldo = saldo - saque
+        extrato.append(f'Saque de R${saque:.2f}')
+        print(f'Você ainda pode efetuar {LIMITES_SAQUE - numeros_saque} saques')
+        print(f'Seu saldo é de R${saldo:.2f}')
+        print()
+        
+    elif 'E' in opçao.title():
+        if not extrato:
+            print('Não houve movimentação na sua conta.')
+            print()
+        for n, l in enumerate(extrato):
+            print(f'{n + 1}: ', l)
+        print(f'R${saldo:.2f}')
+        print()
+    else:
+        print('Não há essa opção. Selecione a opção abaixo.')
