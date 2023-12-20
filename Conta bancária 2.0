@@ -1,0 +1,53 @@
+# Banco - Sistema Simples em Python
+
+# Lista para armazenar as contas bancárias
+contas = []
+
+# Função para criar uma conta
+def criar_conta(usuario, saldo_inicial=0):
+    nova_conta = {'usuario': usuario, 'saldo': saldo_inicial}
+    contas.append(nova_conta)
+    return nova_conta
+
+# Função para listar todas as contas
+def listar_contas():
+    for conta in contas:
+        print(f"Usuário: {conta['usuario']}, Saldo: R${conta['saldo']}")
+
+# Função para buscar uma conta por usuário
+def filtrar_usuario(usuario):
+    for conta in contas:
+        if conta['usuario'] == usuario:
+            return conta
+    return None
+
+# Função para realizar um depósito
+def depositar(conta, valor):
+    conta['saldo'] += valor
+    print(f"Depósito de R${valor} realizado. Novo saldo: R${conta['saldo']}")
+
+# Função para realizar um saque
+def sacar(conta, valor):
+    if conta['saldo'] >= valor:
+        conta['saldo'] -= valor
+        print(f"Saque de R${valor} realizado. Novo saldo: R${conta['saldo']}")
+    else:
+        print("Saldo insuficiente. Saque não realizado.")
+
+# Função para exibir o extrato da conta
+def extrato(conta):
+    print(f"Extrato para o usuário {conta['usuario']} - Saldo: R${conta['saldo']}")
+
+# Exemplo de uso
+usuario1 = criar_conta("Joao")
+usuario2 = criar_conta("Maria", 1000)
+
+listar_contas()
+
+usuario_busca = filtrar_usuario("Joao")
+if usuario_busca:
+    depositar(usuario_busca, 500)
+    sacar(usuario_busca, 200)
+    extrato(usuario_busca)
+else:
+    print("Usuário não encontrado.")
