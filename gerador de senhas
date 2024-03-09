@@ -1,0 +1,16 @@
+import random
+
+def gerador():
+    print('Sua senha: ')
+    for senha in range(exemplos):
+        senha = ' '
+        for c in range(tamanho):
+            senha = senha + random.choice(letras)
+        print(senha)
+
+print('Bem vindo ao gerador de senhas !!')
+letras = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%¨&*()'
+exemplos = int(input('Quantidade exemplos para senha: '))
+tamanho = int(input('Tamanho da sua senha: '))
+
+gerador()
