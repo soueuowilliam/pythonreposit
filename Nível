@@ -1,0 +1,22 @@
+nomeheroi = "JalinRabei"
+xp = int(input('Quantidade de XP o seu personagem tem: '))
+
+if xp <= 1000:
+    print(f'Seu heroi {nomeheroi} nível é Ferro!')
+elif xp > 1001 or xp <= 2000:
+    print(f'Seu heroi {nomeheroi} nível é Bronze!')
+elif xp > 2001 or xp <= 3000:
+    print(f'Seu heroi {nomeheroi} nível é Prata!')
+elif xp > 3001 or xp <= 4000:
+    print(f'Seu heroi {nomeheroi} nível é Ouro!')
+elif xp > 4001 or xp <= 6000:
+    print(f'Seu heroi {nomeheroi} nível é Platina!')
+elif xp > 6001 or xp <= 8000:
+    print(f'Seu heroi {nomeheroi} nível é Diamente!')
+elif xp > 8001 or xp <= 9000:
+    print(f'Seu heroi {nomeheroi} nível é Ascendente!')
+elif xp > 9001 or xp <= 10000:
+    print(f'Seu heroi {nomeheroi} nível é Imortal!')
+elif xp > 10001:
+    print(f'Seu heroi {nomeheroi} nível é Radiante!')
+
